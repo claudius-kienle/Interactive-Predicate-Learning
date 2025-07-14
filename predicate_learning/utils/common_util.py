@@ -22,7 +22,7 @@ class AgentQuery:
 @dataclass
 class AgentAction:
     action: Union[Literal, None]
-    query: Optional[AgentQuery] = AgentQuery()
+    query: Optional[AgentQuery] = field(default_factory=AgentQuery)
     pddl_plan_time: Optional[float] = 0.0
 
 
@@ -48,7 +48,7 @@ class EnvFeedback:
     failure_type: Optional[int] = -1
     goal_achieved: Optional[bool] = False
     episode_ends: Optional[bool] = False
-    failure_explain: Optional[str] = FailureType.Unknown
+    failure_explain: Optional[str] = field(default=str(FailureType.Unknown))
     non_goal_explain: Optional[str] = ""
 
 

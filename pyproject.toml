@@ -1,0 +1,26 @@
+[project]
+name = "predicate-learning"
+version = "0.1.1"
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">=3.9"
+dependencies = [
+    "torch",
+    "numpy",
+    "scipy",
+    "matplotlib",
+    "pyyaml",
+    "pygame",
+    "opencv-python",
+    "termcolor",
+    "tabulate",
+    "hydra-core",
+    "retry",
+    "openai==0.27.1",
+    "pddlgym",
+    "Box2D",
+    "astunparse",
+]
+
+[tool.setuptools.packages.find]
+include = ["predicate_learning*"]

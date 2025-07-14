@@ -1,7 +1,9 @@
 # author: Caelan Garrett and Zi Wang
 import numpy as np
 import sys
-sys.path.append('predicate_learning/predicate_gym/Kitchen2D/motion-planners')
+import os
+sys.path.append(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "motion-planners"))
+# sys.path.append('predicate_learning/predicate_gym/Kitchen2D/motion-planners')
 try:
     from motion_planners.rrt_connect import birrt
     from motion_planners.rrt_connect import direct_path
