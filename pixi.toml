@@ -1,0 +1,17 @@
+[project]
+name = "interactive_predicate_learning"
+version = "0.1.1"
+description = "Interactive predicate learning environment"
+authors = ["Your Name <your.email@example.com>"]
+channels = ["nvidia", "pytorch", "conda-forge"]
+platforms = ["linux-64"]
+
+[dependencies]
+python = "3.9.*"
+# pytorch = { channel = "pytorch" }
+pybox2d = { channel = "conda-forge" }
+# cmake = ">=4.0.3,<5"
+
+[pypi-dependencies]
+pddlgym-planners = { path = "../pddlgym_planners", editable = true }
+predicate-learning = { path = ".", editable = true }

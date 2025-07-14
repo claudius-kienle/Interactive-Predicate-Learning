@@ -117,7 +117,8 @@ class GPT_Chat:
 
 class LLMBase(abc.ABC):
     def __init__(self, use_gpt_4: bool, *args, **kwargs):
-        engine = "gpt-4-0125-preview" if use_gpt_4 else "gpt-3.5-turbo"
+        # engine = "gpt-4-0125-preview" if use_gpt_4 else "gpt-3.5-turbo"
+        engine = "gpt-4.1-mini-2025-04-14"
         # gpt-4-1106-preview
         self.llm_gpt = GPT_Chat(engine=engine)
 
