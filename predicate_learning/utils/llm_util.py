@@ -6,9 +6,6 @@ import abc
 import logging
 
 
-openai_key_folder = Path(__file__).resolve().parent.parent.parent / "openai_keys"
-OPENAI_KEYS = load_json(openai_key_folder / "openai_key.json")
-
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
 
@@ -58,6 +55,9 @@ class GPT_Chat:
         self.stop = stop
 
         # add key
+        openai_key_folder = Path(__file__).resolve().parent.parent.parent / "openai_keys"
+        OPENAI_KEYS = load_json(openai_key_folder / "openai_key.json")
+
         openai.api_key = OPENAI_KEYS["key"]
         if "org" in OPENAI_KEYS:
             openai.organization = OPENAI_KEYS["org"]
