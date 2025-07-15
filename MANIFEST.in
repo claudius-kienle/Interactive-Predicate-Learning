@@ -1,0 +1,13 @@
+# Include configuration files
+recursive-include predicate_learning/configs *.yaml
+# Include prompt templates
+recursive-include predicate_learning/prompts *.txt
+# Include domain data files
+recursive-include predicate_learning/predicate_gym/domains *.json
+recursive-include predicate_learning/predicate_gym/domains *.pddl
+recursive-include predicate_learning/predicate_gym/domains *.py
+# Include assets
+recursive-include assets *.png
+# Include documentation
+include README.md
+include LICENSE
